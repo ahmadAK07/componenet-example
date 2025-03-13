@@ -33,6 +33,19 @@ body{
 .text-17{
     font-size: 17px !important;
 }
+.text-18{
+    font-size: 18px !important;
+}
+
 .text-link{
     color: #4479f3 !important;
+}
+
+.heading-1{
+    font-size: 75px;
+}
+@media screen and (max-width: 768px) {
+    .heading-1{
+        font-size: 49px;
+    }
 }
