@@ -1,0 +1,272 @@
+/* 
+  COLOR PALETTE:
+    - White: #ffffff
+    - Red:   #d32f2f
+    - Navy:  #0d47a1
+*/
+
+:root {
+    --color-white: #ffffff;
+    --color-red: #d32f2f;
+    --color-navy: #0d47a1;
+    --color-navy-hover: #1565c0;
+    --color-text: #333;
+    --color-border: #ddd;
+    --font-body: "Segoe UI", Arial, sans-serif;
+  }
+  
+  /* Global reset */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: var(--font-body);
+    color: var(--color-text);
+    background-color: #f8f8f8;
+    line-height: 1.5;
+  }
+  
+  .required {
+    color: var(--color-red);
+    margin-left: 4px;
+  }
+  
+  /* HEADER */
+  .page-header {
+    display: flex;
+    align-items: center;
+    background: var(--color-white);
+    padding: 1.5rem 2rem;
+    border-bottom: 1px solid var(--color-border);
+  }
+  
+  .page-header h1 {
+    font-size: 1.6rem;
+    font-weight: 600;
+  }
+  
+  .page-header .lighter {
+    font-weight: 300;
+    color: var(--color-navy);
+  }
+  
+  /* MAIN CONTENT CONTAINER */
+  .form-container {
+    max-width: 1800px;
+    margin: 2rem auto;
+    background: var(--color-white);
+    padding: 2rem;
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+  }
+  
+  .form-container section {
+    margin-bottom: 2rem;
+  }
+  
+  .form-container h2 {
+    margin-bottom: 1rem;
+    color: var(--color-navy);
+    font-size: 1.25rem;
+  }
+  
+  /* FORM FIELDS */
+  .form-row {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+  }
+  
+  .form-row label {
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+  }
+  
+  .form-row input[type="text"],
+  .form-row input[type="date"],
+  .form-row select {
+    padding: 0.6rem;
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+  
+  /* EQUIPMENT TYPE WRAPPER */
+  .equipment-type-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .equipment-type label {
+    margin-right: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  
+  .equipment-type input {
+    margin-right: 0.3rem;
+    transform: translateY(1px);
+  }
+  
+  .soc-toggle {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+  }
+  
+  .soc-toggle label {
+    margin-right: 0.5rem;
+  }
+  
+  /* CONTAINER GRID */
+  .container-size-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* INDIVIDUAL CONTAINER CARD */
+  .container-option {
+    position: relative;
+    border-radius: 4px;
+    border: 1px solid #cfd8dc;
+    min-height: 160px;
+    background: url('https://cms.zenitheclipse.online/uploads/thumbnail_container_88d17cbe24.webp?updatedAt=2025-04-06T16%3A09%3A31.448Z') center center no-repeat;
+    background-size: cover;
+    overflow: hidden; /* ensures overlay doesn't overflow the container */
+  }
+  
+  /* 
+    The .overlay covers the ENTIRE container area. 
+    The .overlay-content is on top of it.
+  */
+  .overlay {
+    position: absolute;
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  
+  .overlay-content {
+    position: relative;
+    z-index: 1; 
+    text-align: center;
+    color: var(--color-white);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+  
+  .container-title {
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+    font-size: 1rem;
+  }
+  
+  /* QUANTITY CONTROL */
+  .quantity-control {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .qty-btn {
+    background-color: var(--color-navy);
+    color: var(--color-white);
+    border: none;
+    padding: 0.5rem 0.8rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    margin: 0 0.3rem;
+    transition: background 0.2s;
+  }
+  
+  .qty-btn:hover {
+    background-color: var(--color-navy-hover);
+  }
+  
+  .qty-input {
+    width: 60px;
+    text-align: center;
+    font-size: 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    margin: 0 0.3rem;
+  }
+  
+  /* CHECKBOX LABEL */
+  .checkbox-label {
+    margin-left: 1rem;
+    display: inline-flex;
+    align-items: center;
+    font-weight: 500;
+  }
+  
+  .checkbox-label input {
+    margin-right: 0.3rem;
+  }
+  
+  /* ACTION BUTTONS */
+  .form-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .primary-button {
+    background-color: var(--color-navy);
+    color: var(--color-white);
+    border: none;
+    padding: 0.7rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.2s;
+  }
+  
+  .primary-button:hover {
+    background-color: var(--color-navy-hover);
+  }
+  
+  .secondary-button {
+    background-color: var(--color-red);
+    color: var(--color-white);
+    border: none;
+    padding: 0.7rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.2s;
+  }
+  
+  .secondary-button:hover {
+    filter: brightness(1.1);
+  }
+  
+  /* DISCLAIMER */
+  .disclaimer p {
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.4;
+  }
+  
+  .disclaimer a {
+    color: var(--color-navy);
+    text-decoration: none;
+  }
+  
+  .disclaimer a:hover {
+    text-decoration: underline;
+  }

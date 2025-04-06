@@ -1,261 +1,174 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-    <link rel="stylesheet" href="global.css">
-    <style type="text/tailwindcss">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SpotOn Rates – Precision Pricing for Global Shipping</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="page-header">
+    <h1>SpotOn Rates <span class="lighter">– Precision Pricing for Global Shipping</span></h1>
+  </header>
 
-      @theme {
-        --color-primary: slateblue;
-        --color-link: #4479f3;
-      }
-    </style>
-  </head>
-  <body style="text-align: left;">
+  <!-- MAIN CONTENT -->
+  <main class="form-container">
+    <!-- ROUTE DETAILS -->
+    <section class="route-details">
+      <h2>Route Details</h2>
+      <div class="form-row">
+        <label for="origin">Origin<span class="required">*</span></label>
+        <input type="text" id="origin" placeholder="Name / Code / Port" />
+      </div>
+      <div class="form-row">
+        <label for="destination">Destination<span class="required">*</span></label>
+        <input type="text" id="destination" placeholder="Name / Code / Port" />
+      </div>
+      <div class="form-row">
+        <label for="vesselDeparture">Vessel departure from</label>
+        <input type="date" id="vesselDeparture" />
+      </div>
+    </section>
 
+    <!-- CARGO DETAILS -->
+    <section class="cargo-details">
+      <h2>Cargo Details</h2>
 
-     <div class="p-[50px] block"></div>
-    <div id="first-section" style="color: #4a494a;" class="b-t  h-[250px] flex flex-wrap px-[30px] pt-[5px]">
-        <div class="xl:min-w-[50%] flex">
-          <h1 class="heading-1" >Our contacts</h1 >
+      <!-- Equipment type and SOC toggle -->
+      <div class="equipment-type-wrapper">
+        <div class="equipment-type">
+          <label>
+            <input type="radio" name="equipmentType" value="dry" checked />
+            Dry
+          </label>
+          <label>
+            <input type="radio" name="equipmentType" value="reefer" />
+            Reefer
+          </label>
+          <label>
+            <input type="radio" name="equipmentType" value="nor" />
+            NOR
+          </label>
+          <label>
+            <input type="radio" name="equipmentType" value="special" />
+            Special
+          </label>
         </div>
-        <div class="xl:min-w-[50%] flex pt-[30px]">
-          <p class="lg:px-[30px] text-18">Get in touch. <br>
-            Want to get in touch? We’d love to hear from you. Here’s <br>
-             how you can reach us.</p>
+        <div class="soc-toggle">
+          <label for="soc">Shipper Owned Container (SOC)</label>
+          <input type="checkbox" id="soc" />
         </div>
-    </div>
-    <div id="second-section" class="flex flex-wrap">
-         <div class="pt-[75px] pb-[90px] b-t b-r px-[30px] xl:w-[25%] md:w-[50%] w-[100%]">
-               <p class="mb-[16px] text-18 uppercase font-semibold" style="color:#8a8b94;">phone</p>
-               <a href="/" class="text-3xl font-medium" style="color: #4a494a;">
-                <span>+1 (212) 564 15 81</span>
-               </a>
-         </div>
-         <div class="pt-[75px] pb-[90px] b-t b-r px-[30px] xl:w-[25%] md:w-[50%] w-[100%]">
-               <p class="mb-[16px] text-18 uppercase font-semibold" style="color:#8a8b94;">email</p>
-               <a href="mailto:info@csd.com" class="text-3xl font-medium" style="color: #4a494a;">
-                <span>info@csd.com</span>
-               </a>
-         </div>
-         <div class="pt-[65px] pb-[80px] b-t px-[30px] xl:w-[50%] w-[100%] flex md:flex-row flex-col  md:h-auto max-h-[300px] justify-between md:items-center items-start md:gap-[0px] gap-[15px]">
-               <h2 class="text-3xl" style="color: #4a494a;font-weight: 400;">Let’s <br class="md:block hidden"> chat</h2>
-               <p class="text-16" style="color: #4a494a;">Leave your email and <br class="md:block hidden"> we will contact you for <br> consulatation.</p>
-               <a href="#callback" style="background: #2f6af2;color: #f8f8f8;" class="text-16 md:mt-[0px] mt-[50px] md:mx-[10px] px-[15px] py-[8px] flex justify-center items-center rounded-[6px]">
-                <span class="bg-medium-blue flex justify-center items-center gap-[6px] font-semibold tracking-wide">write us
-                    <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M7.384 0.664L7.624 0.903999V7.272H6.136V3.176L5.464 3.88L1.352 7.992L0.296 6.952L4.424 2.824L5.192 2.088H1.096V0.664H7.384Z" fill="#F8F8F8"></path>
-                    </svg>
-                </span>
-            </a>
-         </div>
-    </div>
-    <div id="third-section" class=" b-t b-b flex flex-wrap">
-      <div  class="b-r xl:w-[25%] w-[100%] p-[30px]">
-        <p style="color: #8a8b94;" class="uppercase mb-[30px] text-16 font-medium">Address</p>
-
-      <div class="mb-[30px] font-medium" style="font-size: 2vw;line-height: 1.2;color: #4a494a;" >
-        <span>
-          353 Lexington Avenue <br>
-          Suite 400
-        </span>
-        <br>
-        <span>New York, NY, 10016</span>
-        <br>
-        <span>USA</span>
       </div>
 
+      <!-- Container sizes with quantity controls -->
+      <div class="container-size-grid">
+        <!-- Container Option 1 -->
+        <div class="container-option">
+          <!-- The full-card overlay -->
+          <div class="overlay"></div>
+          <!-- Content on top of the overlay -->
+          <div class="overlay-content">
+            <p class="container-title">20' Dry Standard</p>
+            <div class="quantity-control">
+              <button type="button" class="qty-btn minus">-</button>
+              <input type="number" class="qty-input" value="0" min="0" />
+              <button type="button" class="qty-btn plus">+</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Container Option 2 -->
+        <div class="container-option">
+          <div class="overlay"></div>
+          <div class="overlay-content">
+            <p class="container-title">40' Dry Standard</p>
+            <div class="quantity-control">
+              <button type="button" class="qty-btn minus">-</button>
+              <input type="number" class="qty-input" value="0" min="0" />
+              <button type="button" class="qty-btn plus">+</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Container Option 3 -->
+        <div class="container-option">
+          <div class="overlay"></div>
+          <div class="overlay-content">
+            <p class="container-title">40' Dry High Cube</p>
+            <div class="quantity-control">
+              <button type="button" class="qty-btn minus">-</button>
+              <input type="number" class="qty-input" value="0" min="0" />
+              <button type="button" class="qty-btn plus">+</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Container Option 4 -->
+        <div class="container-option">
+          <div class="overlay"></div>
+          <div class="overlay-content">
+            <p class="container-title">45' Dry High Cube</p>
+            <div class="quantity-control">
+              <button type="button" class="qty-btn minus">-</button>
+              <input type="number" class="qty-input" value="0" min="0" />
+              <button type="button" class="qty-btn plus">+</button>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class=" xl:w-[75%] w-[100%] p-[30px] md:h-[480px] h-[400px]">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d198740.17535551134!2d-77.17938943379144!3d38.893905900696275!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7c6de5af6e45b%3A0xc2524522d4885d2a!2sWashington%2C%20DC%2C%20USA!5e0!3m2!1sen!2s!4v1741893612302!5m2!1sen!2s" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+      <!-- Commodity -->
+      <div class="form-row">
+        <label for="commodity">Commodity<span class="required">*</span></label>
+        <select id="commodity" required>
+          <option value="" disabled selected>Select a commodity</option>
+          <option value="Machinery">Machinery</option>
+          <option value="Electronics">Electronics</option>
+          <option value="Textiles">Textiles</option>
+          <!-- More options as needed -->
+        </select>
+        <label class="checkbox-label">
+          <input type="checkbox" id="hazardous" />
+          Hazardous
+        </label>
       </div>
-    </div>
+    </section>
 
-    <footer class="pt-[100px]" style="color:#4a494a">
-        <div id="main-footer" class=" flex w-[100%] flex-wrap">
-        <div id="footer-left" class="px-[30px] pt-[85px] xl:w-[67%] w-[100%] ba b-r flex flex-col">
-         
-         <!-- footer logos -->
-         <div class="mb-[90px] flex ">
-            <a href="/" class="pr-[55px] mr-[55px] ba ba-right b-r">
-            <img src="./img/csd-logo.svg" class="w-auto  min-w-[100px]" alt="footer2" />
-            </a>
-             <img src="./img/autodesk-logo.svg" class="w-auto  min-w-[100px]" alt="footer1" />
-         </div>
+    <!-- ACTION BUTTONS -->
+    <section class="form-actions">
+      <button type="submit" class="primary-button">Get My Quote</button>
+      <button type="reset" class="secondary-button">Reset</button>
+    </section>
 
-         <!-- footer menu -->
-         <div class="flex flex-wrap ml-[-15px]" style="color:#4a494a;font-size: 14px;line-height: 1.5;">
+    <!-- DISCLAIMER -->
+    <section class="disclaimer">
+      <p>
+        Rate not valid for military and affiliated cargo nor armored vehicles.
+        For conditions and quotations please see 
+        <a href="#" target="_blank" rel="noopener noreferrer">Military/dual use</a>.
+      </p>
+    </section>
+  </main>
 
-          <div class="xl:min-w-[25%] sm:min-w-[50%] min-w-[100%]  px-[15px]">
-            <div>
-              <a href="/" class="mb-[30px] block" style="font-size: 14px; font-family: Roboto, sans-serif; font-weight: 500;">
-                CATELOGUE
-              </a>
-              <ul class="mt-[15px] mb-[60px]">
-                <li class="mb-[3px] text-16"><a href="/" style="line-height: 1.5; font-weight: 400;">AEC Collection</a></li>
-                <li class="mb-[3px] text-16"><a href="/" style="line-height: 1.5; font-weight: 400;">PDM Collection</a></li>
-                <li class="mb-[3px] text-16"><a href="/" style="line-height: 1.5; font-weight: 400;">Intergration Solution</a></li>
-              </ul>
-            </div>
-            <div class="flex flex-col">
-              <a href="/" class="mb-[30px] block" style="font-size: 14px; font-family: Roboto, sans-serif; font-weight: 500;">
-                PROJECTS
-              </a>
-              <a href="/" class="mb-[30px] block" style="font-size: 14px; font-family: Roboto, sans-serif; font-weight: 500;">
-                Demonstration of the <br /> BIM model
-              </a>
-            </div>
-          </div>
-        
-          <div class="xl:min-w-[25%] sm:min-w-[50%] min-w-[100%]  px-[15px]">
-            <div>
-              <a href="/" class="mb-[30px] block" style="font-size: 14px; font-family: Roboto, sans-serif; font-weight: 500;">
-                DEVELOPMENT TYPES
-              </a>
-              <ul class="mt-[15px] mb-[60px]">
-                <li class="mb-[3px] text-16"><a href="/" style="line-height: 1.5; font-weight: 400;">Apartment buildings</a></li>
-                <li class="mb-[3px] text-16"><a href="/" style="line-height: 1.5; font-weight: 400;">Individual housing</a></li>
-                <li class="mb-[3px] text-16"><a href="/" style="line-height: 1.5; font-weight: 400;">Office real estate</a></li>
-                <li class="mb-[3px] text-16"><a href="/" style="line-height: 1.5; font-weight: 400;">Retail real estate</a></li>
-                <li class="mb-[3px] text-16"><a href="/" style="line-height: 1.5; font-weight: 400;">Warehouse real estate</a></li>
-                <li class="mb-[3px] text-16"><a href="/" style="line-height: 1.5; font-weight: 400;">HoReCa real estate</a></li>
-                <li class="mb-[3px] text-16"><a href="/" style="line-height: 1.5; font-weight: 400;">Public buildings</a></li>
-                <li class="mb-[3px] text-16"><a href="/" style="line-height: 1.5; font-weight: 400;">Agricultural facilities</a></li>
-              </ul>
-            </div>
-          </div>
-        
-          <div class="xl:min-w-[25%] sm:min-w-[50%] min-w-[100%]  px-[15px]">
-            <div>
-              <a href="/" class="mb-[30px] block" style="font-size: 14px; font-family: Roboto, sans-serif; font-weight: 500;">
-                SERVICES
-              </a>
-              <ul class="mt-[15px] mb-[60px]">
-                <li class="mb-[3px] text-16"><a href="/" style="line-height: 1.5; font-weight: 400;">Consulting and training</a></li>
-                <li class="mb-[3px] text-16"><a href="/" style="line-height: 1.5; font-weight: 400;">Estimated consulting</a></li>
-                <li class="mb-[3px] text-16"><a href="/" style="line-height: 1.5; font-weight: 400;">3D scanning</a></li>
-              </ul>
-            </div>
-            <div>
-              <a href="/" class="mb-[30px] block" style="font-size: 14px; font-family: Roboto, sans-serif; font-weight: 500;">
-                USEFUL MATERIALS
-              </a>
-              <ul class="mt-[15px] mb-[60px]">
-                <li class="mb-[3px] text-16"><a href="/" style="line-height: 1.5; font-weight: 400;">Templates</a></li>
-                <li class="mb-[3px] text-16"><a href="/" style="line-height: 1.5; font-weight: 400;">Articles</a></li>
-                <li class="mb-[3px] text-16"><a href="/" style="line-height: 1.5; font-weight: 400;">Webinars</a></li>
-              </ul>
-            </div>
-          </div>
-        
-          <div class="xl:min-w-[25%] sm:min-w-[50%] min-w-[100%]  px-[15px]">
-            <div>
-              <a href="/" class="mb-[30px] block" style="font-size: 14px; font-family: Roboto, sans-serif; font-weight: 500;">
-                THE COMPANY
-              </a>
-              <ul class="mt-[15px] mb-[60px]">
-                <li class="mb-[3px] text-16"><a href="/" style="line-height: 1.5; font-weight: 400;">About us</a></li>
-                <li class="mb-[3px] text-16"><a href="/" style="line-height: 1.5; font-weight: 400;">Contacts</a></li>
-                <li class="mb-[3px] text-16"><a href="/" style="line-height: 1.5; font-weight: 400;">News</a></li>
-                <li class="mb-[3px] text-16"><a href="/" style="line-height: 1.5; font-weight: 400;">Articles</a></li>
-              </ul>
-            </div>
-          </div>
-        
-        </div>
+  <!-- OPTIONAL JAVASCRIPT FOR QTY BUTTONS -->
+  <script>
+    // Simple plus/minus quantity functionality
+    document.querySelectorAll('.quantity-control').forEach(control => {
+      const minusBtn = control.querySelector('.minus');
+      const plusBtn = control.querySelector('.plus');
+      const qtyInput = control.querySelector('.qty-input');
 
+      minusBtn.addEventListener('click', () => {
+        const currentVal = parseInt(qtyInput.value) || 0;
+        qtyInput.value = Math.max(0, currentVal - 1);
+      });
 
-        <div id="footer-left-bottom" class="mt-auto text-dim hidden xl:block">
-          <div class="px-[0px] pb-[10px]  flex justify-between mt-auto" >
-               <div>
-                <a href="/"  class="underline text-16">Privacy Policy</a>
-               </div>
-               <div class="text-16">
-                CSD.2025©All rights reserved
-               </div>
-               <div>
-                <a href="/" class="flex gap-[10px] items-center  text-16" >
-                  Made By 
-                  <img src="./img/footer-logo.svg" alt="">
-                </a>
-               </div>
-          </div>
-        </div>
-        
-       </div>
-        <div id="footer-right" class="w-[100%] xl:w-[33%]">
-           <div id="footer-right-top" class="h-[410px] b-b flex xl:justify-center justify-start items-center">
-                <div class="md:px-[30px] px-[15px] mx-[15px] w-[100%] max-w-[420px]">
-                   <p class="mb-[45px] font-medium uppercase" style="font-size: 14px;">Subscribe to the news</p>
-                   <form action="/" class="mb-[15px] b-a pt-[9px] pb-[8px] px-[15px] flex items-center rounded-[5px]">
-                       <div style="flex-grow:2;">
-                        <input type="text" placeholder="email" class="w-[100%] outline-none border-none" style="background-color: transparent;color: #8a8b94;">
-                       </div>
-                       <button class="flex items-center">
-                        <span class="font-semibold" style="color: rgb(190, 190, 190);">SEND</span>
-                        <!-- <svg class="success-icon" width="11" height="9" viewBox="0 0 11 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M3.59213 6.33335L1.22222 3.89484L0 5.11706L3.59213 8.70919L11 1.30133L9.77778 0.0790992L3.59213 6.33335Z" fill="#2F6AF2"></path> -->
-                      </svg>
-                       </button>
-                   </form>
-                   <div class="">
-                      <span style="font-size: 14px;line-height: .9;color:rgb(138, 139, 148);">By clicking on the «Send» button, you agree to «Send» button you agree to <a class="underline" href="/">Privacy Policy</a>.</span>
-                   </div>
-                </div>
-           </div>
-           <div id="footer-right-bottom" class="xl:h-[410px] xl:py-[0px] px-[30px] pt-[60px] pb-[90px] xl:mb-[0px] mb-[100px]  flex justify-center items-center">
-                <div class="xl:px-[30px] px-[0px] xl:mx-[15px] mx-[0px] w-[100%] xl:max-w-[420px] xl:block flex flex-col md:flex-row justify-between md:items-center">
-                    <div>
-                      <p class="xl:mb-[45px] mb-[30px] font-medium uppercase" style="font-size: 14px;">contacts</p>
-                 
-                      <div class="mb-[25px] text-16" style="line-height: 1.3;">
-                       <span>353 Lexington Avenue</span><br>
-                       <span>Suite 400, New York, NY,</span><br>
-                       <span>10016, USA</span>
-                      </div>
-                    </div>
-                   <div class="flex flex-col">
-                    <a itemprop="telephone" class="link-contact" href="tel:+12125641581"><span show-scroll="show-text" class="mb-[7px] text-link font-medium">+1 (212) 564 15 81</span></a>
-                    <a itemprop="email" class="link-contact" href="mailto:info@csd.com"><span show-scroll="show-text" class="mb-[7px] text-link font-medium">info@csd.com</span></a>
-                   </div>
-                   <div class="mt-[20px] flex gap-[6px]">
-                    <a target="_blank" href="https://www.facebook.com/sagirovstudio/">
-                        <img width="12px" height="20px" src="img/facebook.svg" alt="facebook">
-                    </a>
-                    <a target="_blank" href="https://vimeo.com/sagirov">
-                        <img width="20px" height="20px" src="img/vimeo.svg" alt="vimeo">
-                    </a>
-                    <a target="_blank" href="https://www.instagram.com/sagirov_com/">
-                        <img width="20px" height="20px" src="img/instagram.svg" alt="instagram">
-                    </a>
-                </div>
-                </div>
-           </div>
-           <div id="footer-right-bottom" class="mt-auto text-dim xl:hidden block px-[30px]">
-            <div class="px-[0px] pb-[10px]  flex flex-wrap justify-between mt-auto" >
-                 <div class=" md:w-[33%] w-[100%]">
-                  <a href="/"  class="underline text-16">Privacy Policy</a>
-                 </div>
-                 <div class="text-16 md:w-[33%] w-[100%]">
-                  CSD.2025©All rights reserved
-                 </div>
-                 <div class=" md:w-[33%] w-[100%] md:mt-[0px] mt-[20px]">
-                  <a href="/" class="flex text-16" >
-                    Made By &nbsp;&nbsp;
-                    <img src="./img/footer-logo.svg" alt="">
-                  </a>
-                 </div>
-            </div>
-          </div>
-          </div>
-       </div>
-        </div>
-     </footer>
-
-
-
-   
-  </body>
+      plusBtn.addEventListener('click', () => {
+        const currentVal = parseInt(qtyInput.value) || 0;
+        qtyInput.value = currentVal + 1;
+      });
+    });
+  </script>
+</body>
 </html>
